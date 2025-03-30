@@ -1,0 +1,45 @@
+/* Updated login page styles */
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f3e5f5, #e1bee7, #8e24aa); /* Light to purple gradient */
+  background-size: cover;
+  margin: 0;
+}
+
+/* Login form container */
+.loginForm {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+/* Form group styling */
+.formGroup {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Button styles */
+.btn-primary {
+  margin-bottom: 15px;
+  margin-top: 25px;
+  background-color: #8e24aa;
+  border-color: #8e24aa;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7b1fa2;
+  border-color: #7b1fa2;
+}
