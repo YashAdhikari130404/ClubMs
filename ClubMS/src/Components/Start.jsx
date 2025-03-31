@@ -39,8 +39,8 @@ const Start = () => {
           top: "20px",
           right: "20px",
           cursor: "pointer",
-          fontSize: "32px",
-          color: "#007bff",
+          fontSize: "50px",
+          color: "rgb(253, 250, 254)",
         }}
         onClick={handleDropdown}
       >
@@ -73,7 +73,7 @@ const Start = () => {
               cursor: "pointer",
             }}
           >
-            Login as User
+            As User
           </button>
           <button
             onClick={() => handleLogin("/adminlogin")}
@@ -85,7 +85,7 @@ const Start = () => {
               cursor: "pointer",
             }}
           >
-            Login as Admin
+            As Admin
           </button>
         </div>
       )}

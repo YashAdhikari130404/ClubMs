@@ -1,0 +1,26 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+  }
+  
+  .profile-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #6a0dad;
+  }
+  
+  .btn-primary {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+  }
+  
+  .btn-primary:hover {
+    background-color: #540d9a;
+    border-color: #540d9a;
+  }
+  

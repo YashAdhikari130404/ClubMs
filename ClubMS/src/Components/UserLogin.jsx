@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -8,17 +8,25 @@ const UserLogin = () => {
   const [values, setValues] = useState({ email: "", password: "" });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const emailRef = useRef(null);
+
+  useEffect(() => {
+    document.activeElement.blur(); // Clear any focus on page load
+  }, []);
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent form submission
     axios
       .post("http://localhost:3000/user/user_login", values)
       .then((result) => {
         console.log("Server response:", result.data);
         if (result.data.loginStatus) {
-          navigate("/dashboard");
+          setValues({ email: "", password: "" }); // Reset form
+          setError(null);
+          navigate("/home");
         } else {
           setError(result.data.error);
+          emailRef.current.focus(); // Refocus on email after error
         }
       })
       .catch((err) => console.log("Login error:", err));
@@ -29,13 +37,16 @@ const UserLogin = () => {
       <div className="loginForm">
         {error && <div className="text-danger">{error}</div>}
         <h2 className="text-center">User Login Page</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div className="formGroup">
             <label>Email</label>
             <input
               type="email"
               className="form-control"
               placeholder="Enter Email"
+              autoComplete="off"
+              autoFocus
+              ref={emailRef}
               onChange={(e) =>
                 setValues({ ...values, email: e.target.value })
               }
@@ -62,7 +73,10 @@ const UserLogin = () => {
             <span
               className="text-primary"
               style={{ cursor: "pointer", textDecoration: "underline" }}
-              onClick={() => navigate("/user_signup")}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/user_signup");
+              }}
             >
               Sign Up Here
             </span>

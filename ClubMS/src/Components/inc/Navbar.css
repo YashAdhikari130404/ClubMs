@@ -1,0 +1,14 @@
+header {
+    background-color: #8e24aa; /* Solid Purple */
+    padding: 10px 0;
+  }
+
+.navlogo{
+    height: 130px;
+    
+}
+.mya{
+    font-size: 18px;
+  color: black !important; /* Set button color to black */
+  transition: color 0.3s ease-in-out;
+}
