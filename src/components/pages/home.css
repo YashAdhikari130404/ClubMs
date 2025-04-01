@@ -51,3 +51,98 @@
     width: 48px;
     height: 48px;
 }
+
+.nsslogo {
+    width: 100% !important;
+    height: 150px;
+    
+}
+.nssclub ul{
+    list-style: none;
+}
+.nssclub ul li i{
+    font-size: 19px;
+    color:#156908 ;
+}
+.nssclub ul li{
+    font-size: 19px;
+    font-weight: bold;
+}
+.nssclub span{
+    color: #707678;
+    font-size: 14px;
+}
+
+.nsshome fieldset{
+    width: auto;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #4CAF50;
+    position: relative;
+}
+.nsshome legend{
+    text-align: center;
+}
+
+.pascclub ul{
+    list-style: none;
+}
+.pascclub ul li i{
+    font-size: 19px;
+    color:#2ba4dc ;
+}
+.pascclub ul li{
+    font-size: 19px;
+    font-weight: bold;
+}
+.pascclub span{
+    color: #707678;
+    font-size: 14px;
+}
+
+.paschome fieldset{
+    width: auto;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #3184e4;
+    position: relative;
+}
+.paschome legend{
+    text-align: center;
+}
+
+.edcclub ul{
+    list-style: none;
+}
+.edcclub ul li i{
+    font-size: 19px;
+    color:#b61382 ;
+}
+.edcclub ul li{
+    font-size: 19px;
+    font-weight: bold;
+}
+.edcclub span{
+    color: #707678;
+    font-size: 14px;
+}
+
+.edchome fieldset{
+    width: auto;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #b61382;
+    position: relative;
+}
+.edchome legend{
+    text-align: center;
+}
+.custom-btn {
+    background-color: #b61382;
+    border-color: #b61382;
+    color: white;
+}
+.custom-btn:hover {
+    background-color: #c04298; 
+    color: white;
+}

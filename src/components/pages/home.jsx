@@ -2,12 +2,16 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import './home.css'
+import Mynavbar from '../inc/Navbar'
 import college from '../../assets/images/college.jpg'
 import './home_media.css'
 import file from '../../assets/images/file.jpg'
 import star from '../../assets/images/star.png'
 import chat from '../../assets/images/chat.jpg'
 import fire1 from '../../assets/images/fire1.jpg'
+import nss_home_logo from '../../assets/images/nss_home_logo.jpg' 
+import edc_home_club from '../../assets/images/edc_home_club.jpg'
+import pasc_home_log from '../../assets/images/pasc_home_log.jpg' 
 import { useRef } from "react";
 
 
@@ -15,16 +19,25 @@ function Home()
 {
     const navigate = useNavigate();
     const clubinfo = useRef(null);
+    const clubs = useRef(null) ;
 
     const handleEnroll = () => {
-        navigate("/profile"); 
+        clubs.current?.scrollIntoView({ behavior: "smooth" }); 
     };
 
     const handleKnow = () => {
         clubinfo.current?.scrollIntoView({ behavior: "smooth" }); 
     };
+
+    function handlenss()
+    {
+        navigate("/nss-home") ;
+    }
+
     return (
        <div>
+            
+            <Mynavbar />
             <section className="container-fluid py-lg-6 py-sm-5 py-4">
                 <Container>
                     <div className="row justify-content-between g-5 align-items-center">
@@ -130,7 +143,7 @@ function Home()
                 </div>
             </section>
 
-            <section className="container-fluid py-5 mt-3 clubsinfo shadow-lg"> 
+            <section className="container-fluid py-5 mt-3 clubsinfo shadow-lg" ref={clubs}> 
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center">
@@ -138,15 +151,86 @@ function Home()
                         </div>
                     </div>
 
-                    <div className="row gy-4">
-                        <div className="col-md-4 col-sm-1 pt-3">
-                            <fieldset>
-                                <legend>Heloo</legend>
-                            </fieldset>
+                    <div className="row gy-4 gx-4">
+                        <div class=" col-lg-4 col-md-6 col-sm-1 pt-3">
+                            <div class="m-4 nsshome">
+                                <fieldset>
+                                    <legend>NSS</legend>
+                                    <div class="nssclub">
+                                        <img src={nss_home_logo} alt="" class="nsslogo"/>
+                                        <ul class="mt-4 p-0">
+                                            <li><i class="fa-solid fa-circle-check"></i> Social Impact </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Skill Development  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Networking </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Certificates & Recognition </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Personal Growth </li>
+                                        </ul>
+                                        <hr />
+                                        <button class="btn btn-success fbtn" id="mybtn" onClick={handlenss}>Apply Now</button>
+                                        <br />
+                                        <br />
+                                        <div class="text-center">
+                                            <span>Be part of NSS club</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
                         </div>
+
+                        <div className="col-lg-4 col-md-6 col-sm-1 pt-3 ">
+                            <div className="m-4 paschome">
+                                <fieldset>
+                                    <legend>PASC</legend>
+                                    <div class="pascclub">
+                                        <img src={pasc_home_log} alt="" class="nsslogo" />
+                                        <ul class="mt-4 p-0">
+                                            <li><i class="fa-solid fa-circle-check"></i> Technical Growth  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Hands-on Experience  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Hackathons & Events  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Networking </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Career Boost </li>
+                                        </ul>
+                                        <hr />
+                                        <button class="btn btn-primary fbtn" id="mybtn" onClick={handleEnroll}>Apply Now</button>
+                                        <br />
+                                        <br />
+                                        <div class="text-center">
+                                            <span>Be part of PASC club</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6 col-sm-1 pt-3 ">
+                            <div className="m-4 edchome">
+                                <fieldset>
+                                    <legend>EDC</legend>
+                                    <div class="edcclub">
+                                        <img src={edc_home_club} alt="" class="nsslogo" />
+                                        <ul class="mt-4 p-0">
+                                            <li><i class="fa-solid fa-circle-check"></i> Startup Culture  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Business & Strategy  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Networking , Collaborations  </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Workshops & Events </li>
+                                            <li><i class="fa-solid fa-circle-check"></i> Incubation & Support </li>
+                                        </ul>
+                                        <hr />
+                                        <button className="btn fbtn custom-btn" onClick={handleEnroll}>Apply Now</button>
+                                        <br />
+                                        <br />
+                                        <div class="text-center">
+                                            <span>Be part of EDC club</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
+          
        </div>
     )
 }

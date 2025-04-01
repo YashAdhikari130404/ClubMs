@@ -19,9 +19,9 @@ function Mynavbar()
                         <div className="d-flex col-cm-6 gap-4 p-md-4 p-0 justify-content-end btn-outer align-self-center rightcont">
                             <NavLink to="/" className="text-decoration-none mya">HOME</NavLink>
                             <NavDropdown title="CLUBS" id="basic-nav-dropdown" className="mya">
-                                <NavDropdown.Item href="/NSS">NSS</NavDropdown.Item>
+                                <NavDropdown.Item href="/nss-home">NSS</NavDropdown.Item>
                                 <NavDropdown.Item href="/EDC">EDC</NavDropdown.Item>
-                                <NavDropdown.Item href="/IEE">IEEE</NavDropdown.Item>
+                                <NavDropdown.Item href="/IEE">PASC</NavDropdown.Item>
                           </NavDropdown>
                           <NavLink to="/profile" className="text-decoration-none mya">Profile</NavLink>
                           <NavLink to="/logout" className="text-decoration-none mya">LOGOUT</NavLink>
