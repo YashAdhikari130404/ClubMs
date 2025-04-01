@@ -1,5 +1,7 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Mynavbar from './Components/inc/Navbar';
 import Start from './Components/Start';
 import Login from './Components/Login';
 import Home from './Components/pages/home';
@@ -8,37 +10,33 @@ import UserSignUp from './Components/UserSignUp';
 import Club from './Components/pages/clubs';
 import Logout from './Components/pages/logout';
 import Profile from './Components/pages/profile';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Mynavbar from './Components/inc/Navbar'; // Import Navbar
+import Nsshome from './Components/clubs/nsshome';
+import Nssactivity from './Components/clubs/activity';
+import Nssteam from './Components/clubs/team';
+import Joinnss from './Components/clubs/joinnss';
 
 function App() {
   return (
     <Router>
+      
       <Routes>
-        {/* Wrap Home with Navbar */}
-        <Route
-          path="/home"
-          element={
-            <>
-              <Mynavbar /> {/* Show Navbar ONLY on Home Page */}
-              <Home />
-            </>
-          }
-        />
-        
-        {/* Other Pages without Navbar */}
         <Route path="/" element={<Start />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/adminlogin" element={<Login />} />
         <Route path="/user_login" element={<UserLogin />} />
         <Route path="/user_signup" element={<UserSignUp />} />
         <Route path="/clubs" element={<Club />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/nss-home" element={<Nsshome />} />
+        <Route path="/nss-activity" element={<Nssactivity />} />
+        <Route path="/nss-team" element={<Nssteam />} />
+        <Route path="/nss-join" element={<Joinnss />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
 
