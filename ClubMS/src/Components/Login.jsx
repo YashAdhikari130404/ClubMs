@@ -34,7 +34,7 @@ const Login = () => {
             error && error
           }
           </div> 
-        <h2 className="text-center">Admin Login</h2>
+        <h2 className="text-center adminh2">Admin Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="formGroup">
             <label>Email</label>
@@ -56,7 +56,7 @@ const Login = () => {
               }
             />
           </div>
-          <button className="btn btn-primary w-100" type="submit">
+          <button className="btn btn-primary w-100 adminbut" type="submit">
             Log in
           </button>
         </form>

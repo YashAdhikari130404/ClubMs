@@ -27,6 +27,27 @@
 .leftside button{
     width: 50%;
 }
+.home-btn-primary {
+    background-color: #007bff !important; 
+    border-color: #007bff !important;
+    color: white;
+}
+  
+.home-btn-primary:hover {
+    background-color: #1586fe !important; 
+    border-color: #007bff !important;
+    color: white;
+}
+  
+.home-btn-outline-primary {
+color: #007bff !important;
+border-color: #007bff !important;
+}
+  
+.home-btn-outline-primary:hover {
+background-color: #007bff !important;
+color: #fff !important;
+}
 
 .midcont{
     background-color: rgb(221, 219, 219);
@@ -52,6 +73,9 @@
     height: 48px;
 }
 
+.clubsinfo h2{
+    color: rgb(57, 55, 55);
+}
 .nsslogo {
     width: 100% !important;
     height: 150px;

@@ -36,7 +36,7 @@ const UserLogin = () => {
     <div className="loginPage">
       <div className="loginForm">
         {error && <div className="text-danger">{error}</div>}
-        <h2 className="text-center">User Login Page</h2>
+        <h2 className="text-center adminh2">User Login Page</h2>
         <form onSubmit={handleSubmit} noValidate>
           <div className="formGroup">
             <label>Email</label>
@@ -65,7 +65,7 @@ const UserLogin = () => {
               required
             />
           </div>
-          <button className="btn btn-primary w-100" type="submit">
+          <button className="btn btn-primary w-100 usersignin" type="submit">
             Log in
           </button>
           <p className="text-center mt-3">

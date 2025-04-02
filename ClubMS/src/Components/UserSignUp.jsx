@@ -32,7 +32,7 @@ const UserSignup = () => {
       <div className="loginForm">
         {error && <div className="text-danger">{error}</div>}
         {success && <div className="text-success">{success}</div>}
-        <h2 className="text-center">Sign Up to Get Started</h2>
+        <h2 className="text-center adminh2">Sign Up to Get Started</h2>
         <form onSubmit={handleSubmit}>
           <div className="formGroup">
             <label>Email</label>
@@ -58,7 +58,7 @@ const UserSignup = () => {
               required
             />
           </div>
-          <button className="btn btn-primary w-100" type="submit">
+          <button className="btn btn-primary w-100 usersignup" type="submit">
             Sign Up
           </button>
           <p className="text-center mt-3">

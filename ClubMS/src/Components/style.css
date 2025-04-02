@@ -31,7 +31,7 @@
 }
 
 /* Button styles */
-.btn-primary {
+.adminbut,.usersigin,.usersignup {
   margin-bottom: 15px;
   margin-top: 25px;
   background-color: #8e24aa;
@@ -39,7 +39,15 @@
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.adminbut:hover {
+  background-color: #7b1fa2;
+  border-color: #7b1fa2;
+}
+.usersigin:hover {
+  background-color: #7b1fa2;
+  border-color: #7b1fa2;
+}
+.usersignup:hover {
   background-color: #7b1fa2;
   border-color: #7b1fa2;
 }

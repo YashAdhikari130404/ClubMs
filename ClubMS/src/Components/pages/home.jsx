@@ -53,8 +53,8 @@ function Home()
                                 </ul>
                                 <p>Be part of something bigger. Explore, engage, and evolve at PICT!</p>
                                 <div class="bannerbtn d-flex gap-3">
-                                <button class="btn btn-primary fbtn" onClick={handleEnroll}>Enroll Now</button>
-                                <button class="btn btn-outline-primary sbtn" onClick={handleKnow}>Know more</button>
+                                <button className="btn home-btn-primary fbtn" onClick={handleEnroll}>Enroll Now</button>
+                                <button className="btn home-btn-outline-primary sbtn" onClick={handleKnow}>Know more</button>
                             </div>
                             </div>
                         </div>
@@ -191,7 +191,7 @@ function Home()
                                             <li><i class="fa-solid fa-circle-check"></i> Career Boost </li>
                                         </ul>
                                         <hr />
-                                        <button class="btn btn-primary fbtn" id="mybtn" onClick={handleEnroll}>Apply Now</button>
+                                        <button className="btn home-btn-primary fbtn" id="mybtn" onClick={handleEnroll}>Apply Now</button>
                                         <br />
                                         <br />
                                         <div class="text-center">

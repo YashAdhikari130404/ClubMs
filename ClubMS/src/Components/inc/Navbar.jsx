@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";  // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom";  
 import "./Navbar.css";
 import { Container, NavDropdown } from "react-bootstrap";
 import logo from "/src/assets/images/logo.png";
@@ -7,12 +7,12 @@ import { NavLink } from "react-router-dom";
 import './Nav_media.css';
 
 function Mynavbar() {
-    const navigate = useNavigate();  // ✅ Initialize navigate function
+    const navigate = useNavigate();  
 
     const handleLogout = () => {
-        // Perform logout actions (e.g., clear user session, tokens)
-        localStorage.removeItem("userToken");  // Example: Remove authentication token
-        navigate("/");  // ✅ Redirect to home page
+        
+        localStorage.removeItem("userToken"); 
+        navigate("/");  
     };
 
     return (
