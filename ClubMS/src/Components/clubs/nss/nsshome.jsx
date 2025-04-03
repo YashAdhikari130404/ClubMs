@@ -1,10 +1,10 @@
 import Mynavbar from "./navbar"
-import nsspic from '../../assets/images/nsspic.jpg'
-import fooddon from '../../assets/images/fooddon.jpg'
-import blooddon from '../../assets/images/blooddon.jpg'
-import teach from '../../assets/images/teach.jpg'
-import planting from '../../assets/images/planting.jpg'
-import mag1 from '../../assets/images/mag1.jpg'
+import nsspic from '../../../assets/images/nsspic.jpg'
+import fooddon from '../../../assets/images/fooddon.jpg'
+import blooddon from '../../../assets/images/blooddon.jpg'
+import teach from '../../../assets/images/teach.jpg'
+import planting from '../../../assets/images/planting.jpg'
+import mag1 from '../../../assets/images/mag1.jpg'
 
 import './navmedia.css'
 
@@ -93,7 +93,7 @@ function Nsshome()
                     </div>
                 </div>
 
-                <div className="row magazinebody m-2 gx-4 d-flex justify-content-between align-items-center">
+                <div className="row magazinebody m-1 gx-4 d-flex justify-content-between align-items-center">
                     <div className="col-lg-7 col-12 p-5 m-4 magpara">
                         <p>
                         It is indeed a memorable moment for us in presenting you with ‘ The First Magazine of PICT NSS’. PICT NSSorganizes several activities every year along with an annual camp. The magazine has different sections likeActivities, Achievements, Compositions, Sketches, Experiences of NSS Alumni and teachers. Our NSS volunteersalways believe in the motto ‘Not Me, But You'. Through this magazine, we try to showcase the best version ofour team. Hope you all enjoy it!!

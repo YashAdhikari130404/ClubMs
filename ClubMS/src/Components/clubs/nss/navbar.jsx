@@ -2,9 +2,7 @@
 import React from "react";
 import "./navmedia.css"
 import { Container, NavDropdown } from "react-bootstrap";
-//import nsslogo from "./assets/images/nsslogo.jpg" ;
-import nsslogo from "../../assets/images/nsslogo.jpg"; 
-
+import nsslogo from "../../../assets/images/nsslogo.jpg" ;
 import { NavLink } from "react-router-dom";
 
 

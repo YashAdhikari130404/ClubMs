@@ -10,10 +10,10 @@ import UserSignUp from './Components/UserSignUp';
 import Club from './Components/pages/clubs';
 import Logout from './Components/pages/logout';
 import Profile from './Components/pages/profile';
-import Nsshome from './Components/clubs/nsshome';
-import Nssactivity from './Components/clubs/activity';
-import Nssteam from './Components/clubs/team';
-import Joinnss from './Components/clubs/joinnss';
+import Nsshome from './Components/clubs/nss/nsshome';
+import Nssactivity from './Components/clubs/nss/activity';
+import Nssteam from './Components/clubs/nss/team';
+import Joinnss from './Components/clubs/nss/joinnss';
 
 function App() {
   return (
