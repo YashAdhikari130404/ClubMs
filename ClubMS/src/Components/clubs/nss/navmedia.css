@@ -1,0 +1,100 @@
+
+@media screen and (min-width:220px) and (max-width:580px){
+    .rightcont{
+        display: none !important;
+    }
+}
+@media screen and (max-width:1191px) {
+    .magpara{
+        display: none;
+    }
+    .magimg{
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center;
+    }
+    
+}
+
+.nssnavbar{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.nssnavlogo{
+    height: 130px;
+    width: 130px ;
+}
+.nss{
+    font-size: 18px;
+    color : rgb(225, 235, 226);
+}
+
+.nsspic{
+    width: 75vw;
+    height: 500px;
+}
+
+.midconti{
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    margin-bottom: 40px !important ;
+}
+.midconti h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: #03208b;
+}
+
+.eventcont{
+    background-color: rgb(227, 229, 231);
+}
+
+.uniform-img {
+    width: 100%;       /* Ensures all images take full width of their column */
+    height: 180px;     /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures images fit properly */
+    display: block;    /* Removes unwanted spacing */
+}
+
+.eventbody .col-lg-3 {
+    padding: 5px; /* Reduces gap between columns */
+}
+
+.eventbody h4{
+    color: rgb(21, 82, 19);
+}
+.eventcont h1{
+    color: green;
+}
+
+.magazine{
+    background-color: rgb(213, 226, 226);
+}
+.magazinehead{
+    color: green;
+}
+.magazinebody p{
+    font-size: 25px;
+    color: #041b71;
+}
+.magazinebody img{
+    height: 370px; 
+}
+
+.footercont{
+    background-color: #515359;
+}
+.nssfooterleft , .nssfooterright{
+    color: aliceblue;
+}
+.nssfooterleft p{
+    font-size: 19px;
+}
+.nssfooterright i{
+    color: white;
+}
+.insta-icon i {
+    font-size: 24px; 
+}
