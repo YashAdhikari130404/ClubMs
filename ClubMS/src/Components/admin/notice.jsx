@@ -3,7 +3,7 @@ function Notice()
 {
     return (
         <div>
-
+            Notices
         </div>
     )
 }

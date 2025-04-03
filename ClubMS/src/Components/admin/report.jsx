@@ -3,7 +3,7 @@ function Report()
 {
     return (
         <div>
-
+            Reports
         </div>
     )
 }

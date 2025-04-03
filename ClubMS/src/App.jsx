@@ -14,6 +14,12 @@ import Nsshome from './Components/clubs/nss/nsshome';
 import Nssactivity from './Components/clubs/nss/activity';
 import Nssteam from './Components/clubs/nss/team';
 import Joinnss from './Components/clubs/nss/joinnss';
+import Dashboard from './Components/admin/dashboard';
+import ManageClub from './Components/admin/manageclub';
+import ManageMember from './Components/admin/managemembers';
+import Notice from './Components/admin/notice';
+import Report from './Components/admin/report'
+import Addclubs from './Components/admin/addclub';
 
 function App() {
   return (
@@ -32,6 +38,14 @@ function App() {
         <Route path="/nss-activity" element={<Nssactivity />} />
         <Route path="/nss-team" element={<Nssteam />} />
         <Route path="/nss-join" element={<Joinnss />} />
+
+        <Route path="/admin-dashboard" element={<Dashboard />}>
+          <Route path='/admin-dashboard/clubmanage' element={<ManageClub />}/>
+          <Route path='/admin-dashboard/membermanage' element={<ManageMember />} />
+          <Route path='/admin-dashboard/notices' element={<Notice />} />
+          <Route path='/admin-dashboard/report' element={<Report />} />
+          <Route path='/admin-dashboard/addclubs' element={<Addclubs />} />
+        </Route>
       </Routes>
     </Router>
   );
