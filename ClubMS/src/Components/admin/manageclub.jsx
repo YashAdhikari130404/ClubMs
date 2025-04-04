@@ -45,10 +45,10 @@ function ManageClub()
                     <table className="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Descrption</th>
-                                <th>Action</th>
+                                <th style={{width:"5%"}}>ID</th>
+                                <th style={{width:"15%"}}>Name</th>
+                                <th style={{width:"60%"}}>Descrption</th>
+                                <th style={{width:"20%"}}>Action</th>
                             </tr>
                         </thead>
                         <tbody>

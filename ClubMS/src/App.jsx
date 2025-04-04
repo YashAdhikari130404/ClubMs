@@ -44,6 +44,7 @@ function App() {
           <Route path='/admin-dashboard/membermanage' element={<ManageMember />} />
           <Route path='/admin-dashboard/notices' element={<Notice />} />
           <Route path='/admin-dashboard/report' element={<Report />} />
+          <Route path='admin-dashboard/adminlogin' element={<Login />} />
           <Route path='/admin-dashboard/addclubs' element={<Addclubs />} />
         </Route>
       </Routes>

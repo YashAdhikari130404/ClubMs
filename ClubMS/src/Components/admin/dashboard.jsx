@@ -71,13 +71,14 @@ function Dashboard()
                                 to="/admin-dashboard/report"
                                 className="nav-link px-0 align-middle text-white"
                                 >
-                                <i class="fa-regular fa-file fs-4 ms-2"></i>
+                                <i className="fa-regular fa-file fs-4 ms-2"></i>
                                 <span className="ms-3 d-none d-sm-inline">Report</span>
                                 </Link>
                             </li>
 
                             <li className="w-100" >
                                 <Link
+                                    to="/adminlogin"
                                     className='nav-link px-0 align-middle text-white'
                                     >
                                     <i className="fs-4 bi-power ms-2"></i>

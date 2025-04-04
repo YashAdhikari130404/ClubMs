@@ -9,6 +9,7 @@ function Joinnss() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phno : "" ,
         year: "", 
         branch: "", 
         division: "",
@@ -17,7 +18,7 @@ function Joinnss() {
     });
 
     useEffect(() => {
-        axios.get("http://localhost:5000/getNotices").then((response) => {
+        axios.get("http://localhost:3000/getNotices").then((response) => {
             if (response.data.enabled) {
                 setNotices(response.data.notices);
             }
@@ -28,14 +29,10 @@ function Joinnss() {
         setShowNotices((prev) => !prev);
     };
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/submitApplication", formData);
+            await axios.post("http://localhost:3000/submitApplication", formData);
             alert("Application submitted successfully!");
             setFormData({ name: "", email: "", year: "", branch: "", division: "", interest: "", reason: "" });
         } catch (error) {
@@ -71,27 +68,33 @@ function Joinnss() {
                 <div className="joinnss-card joinnss-form-card">
                     <h2>📝 NSS Registration Form</h2>
                     <form onSubmit={handleSubmit} className="joinnss-form">
-                        <input type="text" name="name" className="joinnss-input" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
-                        <input type="email" name="email" className="joinnss-input" placeholder="Email Address" value={formData.email} onChange={handleChange} required />
+                        <input type="text" name="name" className="joinnss-input" placeholder="Full Name" value={formData.name} onChange={(e) => setFormData({...formData , name : e.target.value})} required />
 
-                        {/* Year Selection */}
-                        <select name="year" className="joinnss-select" value={formData.year} onChange={handleChange} required>
+                        <input type="email" name="email" className="joinnss-input" placeholder="Email Address" value={formData.email} onChange={(e) => setFormData({...formData , email : e.target.value})} required />
+
+                        <input type="number" name="mobileno" className="joinnss-input" placeholder="Mobile Number" value={formData.phno} onChange={(e) => setFormData({...formData , phno : e.target.value})} required />
+
+                        <select name="year" className="joinnss-select" value={formData.year} 
+                        onChange={(e) => setFormData({...formData , year : e.target.value})} required>
                             <option value="" disabled> Select Year </option>
                             <option value="FE">FE (First Year)</option>
                             <option value="SE">SE (Second Year)</option>
                             <option value="TE">TE (Third Year)</option>
                         </select>
 
-                        {/* Branch Selection */}
-                        <select name="branch" className="joinnss-select" value={formData.branch} onChange={handleChange} required>
+                        <select name="branch" className="joinnss-select" value={formData.branch} 
+                        onChange={(e) => setFormData({...formData , branch : e.target.value})} required>
                             <option value="" disabled> Select Branch </option>
                             <option value="ENTC">ENTC (Electronics & Telecommunication)</option>
                             <option value="IT">IT (Information Technology)</option>
                             <option value="CS">CS (Computer Science)</option>
                         </select>
-                        <input type="text" name="division" className="joinnss-input" placeholder="Division" value={formData.division} onChange={handleChange} required />
-                        <input type="text" name="interest" className="joinnss-input" placeholder="Field of Interest" value={formData.interest} onChange={handleChange} required />
-                        <textarea name="reason" className="joinnss-textarea" placeholder="Why do you want to join NSS?" value={formData.reason} onChange={handleChange} required />
+
+                        <input type="text" name="division" className="joinnss-input" placeholder="Division" value={formData.division} onChange={(e) => setFormData({...formData , division : e.target.value})} required />
+
+                        <input type="text" name="interest" className="joinnss-input" placeholder="Field of Interest" value={formData.interest} onChange={(e) => setFormData({...formData , interest : e.target.value})} required />
+
+                        <textarea name="reason" className="joinnss-textarea" placeholder="Why do you want to join NSS?" value={formData.reason} onChange={(e) => setFormData({...formData , reason : e.target.value})} required />
 
                         <button type="submit" className="joinnss-btn-submit">🚀 Submit Application</button>
                     </form>
