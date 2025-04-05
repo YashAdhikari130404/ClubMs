@@ -4,9 +4,11 @@ import axios from "axios";
 function Addmember()
 {
     const [applications, setApplications] = useState([]);
+    const [refresh, setRefresh] = useState(false);
+
     useEffect(() => {
         fetchPendingApplications();
-    }, []);
+    }, [refresh]);
 
     const fetchPendingApplications = async () => {
         try {
@@ -29,7 +31,7 @@ function Addmember()
           });
           if (res.data.Status) {
             alert(" Member added successfully!");  
-            setApplications(prev => prev.filter(app => app.id !== id));
+            setRefresh(prev => !prev);
           } else {
             alert(res.data.Error);
           }
@@ -46,7 +48,7 @@ function Addmember()
           });
           if (res.data.Status) {
             alert("Application rejected!");
-            setApplications(prev => prev.filter(app => app.id !== id));
+            setRefresh(prev => !prev);
           } else {
             alert(res.data.Error);
           }

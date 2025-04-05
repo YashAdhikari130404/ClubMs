@@ -57,7 +57,7 @@ function ManageClub()
                                 clubs.map(c => (
                                     <tr>
                                         <td>{c.id}</td>
-                                        <td>{c.club_code}</td>
+                                        <td>{c.club_code}</td>      
                                         <td>{c.name}</td>
                                         <td>{c.description}</td>
                                         <td>

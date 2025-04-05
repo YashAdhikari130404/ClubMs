@@ -45,7 +45,7 @@ function ManageMember()
                     <div className="col-lg-4 col-sm-12 col-12 border">
                       <div className="m-2 p-2">
                           <div>
-                            <h2 className="text-center">Add members</h2><hr></hr>
+                            <h2 className="text-center">View members</h2><hr></hr>
                             <div className="d-flex justify-content-center gap-2">
                             <i class="fa-solid fa-users-viewfinder mt-1"></i> 
                               <p>Do you want to view Members</p>
