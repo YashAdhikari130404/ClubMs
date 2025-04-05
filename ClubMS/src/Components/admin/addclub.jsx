@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function Addclubs()
 {
-    const [clubs , setClubs] =  useState({clubname:"" , clubdesc:""})
+    const [clubs , setClubs] = useState({ clubname:"", clubdesc:"", clubcode:"" });
     const navigate = useNavigate() ;
 
     function handleSubmit(e)
@@ -36,12 +36,21 @@ function Addclubs()
                         onChange={(e) => setClubs({...clubs , clubname : e.target.value})} 
                         className="form-control rounded-0 mt-1"/>
                     </div>
+
+                    <div className="mb-3">
+                        <label htmlFor="clubcode"><strong>Club Code : </strong></label>
+                        <input type="text" name="clubcode" placeholder="e.g. nss, edc"
+                        onChange={(e) => setClubs({...clubs , clubcode : e.target.value})}
+                        className="form-control rounded-0 mt-1" required />
+                    </div>
+
                     <div className="mb-3">
                         <label htmlFor="clubdesc"><strong>Description : </strong></label>
                         <textarea name="clubdesc" id="clubdesc" 
                         onChange={(e) => setClubs({...clubs , clubdesc : e.target.value})} 
                         className="form-control rounded-0 mt-1" />
                     </div>
+
                     <button className="btn btn-primary w-100 rounded-0 mb-2">Add</button>
                 </form>
             </div>

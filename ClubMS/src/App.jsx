@@ -20,6 +20,9 @@ import ManageMember from './Components/admin/managemembers';
 import Notice from './Components/admin/notice';
 import Report from './Components/admin/report'
 import Addclubs from './Components/admin/addclub';
+import Addmember from './Components/admin/addmember';
+import Deletemember from './Components/admin/deletemember';
+import ViewMember from './Components/admin/viewmember';
 
 function App() {
   return (
@@ -46,6 +49,9 @@ function App() {
           <Route path='/admin-dashboard/report' element={<Report />} />
           <Route path='admin-dashboard/adminlogin' element={<Login />} />
           <Route path='/admin-dashboard/addclubs' element={<Addclubs />} />
+          <Route path='/admin-dashboard/addmember' element={<Addmember />} />
+          <Route path='/admin-dashboard/deletemember' element={<Deletemember />} />
+          <Route path='/admin-dashboard/viewmember' element={<ViewMember />} />
         </Route>
       </Routes>
     </Router>

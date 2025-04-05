@@ -15,6 +15,7 @@ function Joinnss() {
         division: "",
         interest: "",
         reason: "",
+        club_code: "nss"
     });
 
     useEffect(() => {
@@ -31,14 +32,21 @@ function Joinnss() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            await axios.post("http://localhost:3000/submitApplication", formData);
-            alert("Application submitted successfully!");
-            setFormData({ name: "", email: "", year: "", branch: "", division: "", interest: "", reason: "" });
-        } catch (error) {
-            alert("Error submitting application");
+        await axios.post("http://localhost:3000/auth/submitApplication", formData)
+        .then(result => {
+            if(result.data.Status)
+            {
+                alert(result.data.Message)
+                setFormData({ name: "", email: "", phno:"" , year: "", branch: "", division: "", interest: "", reason: "" , club_code: "nss"});
+            }
+            else
+            {
+                alert(result.data.Error)
+            }
         }
-    };
+        )
+        .catch(err => console.log(err))
+    }
 
     return (
         <div>

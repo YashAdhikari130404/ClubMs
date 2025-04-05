@@ -46,7 +46,8 @@ function ManageClub()
                         <thead>
                             <tr>
                                 <th style={{width:"5%"}}>ID</th>
-                                <th style={{width:"15%"}}>Name</th>
+                                <th style={{width:"5%"}}>Code</th>
+                                <th style={{width:"10%"}}>Name</th>
                                 <th style={{width:"60%"}}>Descrption</th>
                                 <th style={{width:"20%"}}>Action</th>
                             </tr>
@@ -56,6 +57,7 @@ function ManageClub()
                                 clubs.map(c => (
                                     <tr>
                                         <td>{c.id}</td>
+                                        <td>{c.club_code}</td>
                                         <td>{c.name}</td>
                                         <td>{c.description}</td>
                                         <td>
