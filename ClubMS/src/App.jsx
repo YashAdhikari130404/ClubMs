@@ -18,11 +18,11 @@ import Dashboard from './Components/admin/dashboard';
 import ManageClub from './Components/admin/manageclub';
 import ManageMember from './Components/admin/managemembers';
 import Notice from './Components/admin/notice';
-import Report from './Components/admin/report'
 import Addclubs from './Components/admin/addclub';
 import Addmember from './Components/admin/addmember';
 import Deletemember from './Components/admin/deletemember';
 import ViewMember from './Components/admin/viewmember';
+import AdminDashboardOverview from './Components/admin/Admindashboard';
 
 function App() {
   return (
@@ -43,10 +43,10 @@ function App() {
         <Route path="/nss-join" element={<Joinnss />} />
 
         <Route path="/admin-dashboard" element={<Dashboard />}>
+          <Route index element={<AdminDashboardOverview />} />
           <Route path='/admin-dashboard/clubmanage' element={<ManageClub />}/>
           <Route path='/admin-dashboard/membermanage' element={<ManageMember />} />
           <Route path='/admin-dashboard/notices' element={<Notice />} />
-          <Route path='/admin-dashboard/report' element={<Report />} />
           <Route path='admin-dashboard/adminlogin' element={<Login />} />
           <Route path='/admin-dashboard/addclubs' element={<Addclubs />} />
           <Route path='/admin-dashboard/addmember' element={<Addmember />} />

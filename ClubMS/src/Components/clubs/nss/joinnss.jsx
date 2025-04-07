@@ -19,7 +19,8 @@ function Joinnss() {
     });
 
     useEffect(() => {
-        axios.get("http://localhost:3000/getNotices").then((response) => {
+        axios.get(`http://localhost:3000/auth/getNotices/${formData.club_code}`)
+        .then((response) => {
             if (response.data.enabled) {
                 setNotices(response.data.notices);
             }
