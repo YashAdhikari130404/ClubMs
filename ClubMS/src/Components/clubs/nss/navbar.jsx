@@ -18,10 +18,11 @@ function Mynavbar()
 
                     <div className="col-sm-6 ms-0">
                         <div className="d-flex col-cm-6 gap-4 p-md-4 p-0 justify-content-end btn-outer align-self-center rightcont">
-                            <NavLink to="/nss-home" className="text-decoration-none nss">Home</NavLink>
+                          <NavLink to="/nss-home" className="text-decoration-none nss">Home</NavLink>
                           <NavLink to="/nss-activity" className="text-decoration-none nss">Activities</NavLink>
                           <NavLink to="/nss-team" className="text-decoration-none nss">Team</NavLink>
                           <NavLink to="/nss-join" className="text-decoration-none nss">Register</NavLink>
+                          <NavLink to="/user_login" className="text-decoration-none nss">Logout</NavLink>
                         </div>
                     </div>
                 </div>

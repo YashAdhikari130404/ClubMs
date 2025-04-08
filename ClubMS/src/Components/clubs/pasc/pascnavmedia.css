@@ -1,0 +1,54 @@
+@media screen and (min-width:220px) and (max-width:580px){
+    .rightcont{
+        display: none !important;
+    }
+}
+@media screen and (max-width:1191px) {
+    /* .magpara{
+        display: none;
+    }
+    .magimg{
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center;
+    } */
+    
+}
+
+.pascnavbar{
+    background-color: #629df5;
+    background-image: linear-gradient(160deg, #64bcef 0%, #2c4a7e 100%);
+}
+
+.pascnavlogo{
+    height: 130px;
+    width: 130px ;
+}
+.pasc{
+    font-size: 18px;
+    color : rgb(225, 235, 226);
+}
+
+.domain-card {
+    background-color: #e9ecef;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s ease;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+.domain-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.text-justify {
+    text-align: justify;
+}

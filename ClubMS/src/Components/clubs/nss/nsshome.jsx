@@ -20,7 +20,7 @@ function Nsshome()
                 </div>
             </section>
 
-            <section className="container-fluid ">
+            <section className="container-fluid ">  
                 <div className="container  mt-4 midconti mb-5">
                     <div className="row p-3 align-items-center row-cols-lg-4 row-cols-sm-2 row-cols-1 gy-sm-3">
                         <div class="col text-center">

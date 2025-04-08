@@ -29,7 +29,7 @@ function Mynavbar() {
                             <NavDropdown title="CLUBS" id="basic-nav-dropdown" className="mya">
                                 <NavDropdown.Item href="/nss-home">NSS</NavDropdown.Item>
                                 <NavDropdown.Item href="/EDC">EDC</NavDropdown.Item>
-                                <NavDropdown.Item href="/IEE">PASC</NavDropdown.Item>
+                                <NavDropdown.Item href="/pasc-home">PASC</NavDropdown.Item>
                             </NavDropdown>
                             <NavLink to="/profile" className="text-decoration-none mya">Profile</NavLink>
                           

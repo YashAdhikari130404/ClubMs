@@ -23,6 +23,10 @@ import Addmember from './Components/admin/addmember';
 import Deletemember from './Components/admin/deletemember';
 import ViewMember from './Components/admin/viewmember';
 import AdminDashboardOverview from './Components/admin/Admindashboard';
+import Paschome from './Components/clubs/pasc/paschome' ;
+import Pascactivity from './Components/clubs/pasc/pascactivity';
+import Joinpasc from './Components/clubs/pasc/pascjoin';
+import Pascteam from './Components/clubs/pasc/pascteam';
 
 function App() {
   return (
@@ -41,6 +45,10 @@ function App() {
         <Route path="/nss-activity" element={<Nssactivity />} />
         <Route path="/nss-team" element={<Nssteam />} />
         <Route path="/nss-join" element={<Joinnss />} />
+        <Route path="/pasc-home" element={<Paschome />} />
+        <Route path='/pasc-activity' element={<Pascactivity />} />
+        <Route path='/pasc-team' element={<Pascteam />} />
+        <Route path='/pasc-join' element={<Joinpasc />} />
 
         <Route path="/admin-dashboard" element={<Dashboard />}>
           <Route index element={<AdminDashboardOverview />} />

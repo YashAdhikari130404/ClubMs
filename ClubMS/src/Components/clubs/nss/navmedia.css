@@ -18,7 +18,7 @@
 }
 
 .nssnavbar{
-    background-color: #0093E9;
+    background-color: #87c3e6;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
@@ -34,6 +34,7 @@
 .nsspic{
     width: 75vw;
     height: 500px;
+    border-radius: 10%;
 }
 
 .midconti{
