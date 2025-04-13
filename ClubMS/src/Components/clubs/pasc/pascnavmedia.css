@@ -52,3 +52,43 @@
 .text-justify {
     text-align: justify;
 }
+
+
+/* team page pasc */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  
+  .teamm {
+    background-color: rgb(237, 204, 235);
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .teamm p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .btn-primary-p {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-primary-p:hover {
+    background-color: #0056b3;
+  }

@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Typical from "react-typical";
-import { FaUserCircle } from "react-icons/fa"; // Importing User Icon
+import { FaUserCircle } from "react-icons/fa"; 
 
 const Start = () => {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
 
-  // Toggle dropdown on icon click
+
   const handleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
-  // Navigate to respective login page
+ 
   const handleLogin = (path) => {
     navigate(path);
-    setShowDropdown(false); // Hide dropdown after selection
+    setShowDropdown(false); 
   };
 
   return (
@@ -32,7 +32,6 @@ const Start = () => {
         backgroundSize: "cover",
       }}
     >
-      {/* Login Icon at Top Right */}
       <div
         style={{
           position: "absolute",
@@ -47,7 +46,6 @@ const Start = () => {
         <FaUserCircle />
       </div>
 
-      {/* Dropdown for Login */}
       {showDropdown && (
         <div
           style={{
@@ -90,7 +88,6 @@ const Start = () => {
         </div>
       )}
 
-      {/* Animated Welcome Text */}
       <div
         style={{
           textAlign: "center",
@@ -100,9 +97,9 @@ const Start = () => {
         <h1
           style={{
             fontFamily: "Arial, sans-serif",
-            fontSize: "100px", // Increased font size
+            fontSize: "100px", 
             fontWeight: "bold",
-            color: "#fff", // White text for better contrast
+            color: "#fff", 
           }}
         >
           <Typical
