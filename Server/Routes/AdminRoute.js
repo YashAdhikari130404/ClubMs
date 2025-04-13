@@ -239,5 +239,81 @@ router.delete("/deletemember/:id", (req, res) => {
 });
 
 
+
+//dashboard backend code 
+router.get('/dashboard-overview', (req, res) => {
+    const stats = {};
+
+    con.query('SELECT COUNT(*) AS totalUsers FROM user', (err, userResult) => {
+        if (err) return res.status(500).json({ message: 'Error fetching users' });
+
+        stats.totalUsers = userResult[0].totalUsers;
+
+        con.query('SELECT COUNT(*) AS totalClubs FROM clubs', (err, clubResult) => {
+            if (err) return res.status(500).json({ message: 'Error fetching clubs' });
+
+            stats.totalClubs = clubResult[0].totalClubs;
+
+            con.query("SELECT COUNT(*) AS pendingRegistrations FROM club_applications WHERE status = 'pending'", (err, pendingResult) => {
+                if (err) return res.status(500).json({ message: 'Error fetching pending applications' });
+
+                stats.pendingRegistrations = pendingResult[0].pendingRegistrations;
+
+                con.query("SELECT COUNT(*) AS approvedMembers FROM members", (err, approvedResult) => {
+                    if (err) return res.status(500).json({ message: 'Error fetching approved members' });
+
+                    stats.approvedMembers = approvedResult[0].approvedMembers;
+
+                    res.json(stats);
+                });
+            });
+        });
+    });
+});
+
+//code for admin notice 
+router.post("/sendNotice", (req, res) => {
+    const { club_code, notice } = req.body;
+
+    const sql = "INSERT INTO notices (club_code, notice) VALUES (?, ?)";
+    con.query(sql, [club_code, notice], (err, result) => {
+        if (err) {
+            console.error("Error sending notice:", err);
+            return res.json({ Status: false, Error: "Error sending notice" });
+        }
+        return res.json({ Status: true, Message: "Notice sent successfully" });
+    });
+});
+
+router.get("/getNotices/:club_code", (req, res) => {
+    const clubCode = req.params.club_code;
+
+    const sql = "SELECT notice FROM notices WHERE club_code = ? ORDER BY created_at DESC";
+    con.query(sql, [clubCode], (err, results) => {
+        if (err) {
+            console.error("Error fetching notices:", err);
+            return res.json({ enabled: false });
+        }
+        const notices = results.map(row => row.notice);
+        return res.json({ enabled: true, notices });
+    });
+});
+
+router.delete("/deleteNotice/:id", (req, res) => {
+    const sql = "DELETE FROM notices WHERE id = ?";
+    con.query(sql, [req.params.id], (err, result) => {
+        if (err) return res.json({ Status: false, Error: err });
+        return res.json({ Status: true, Message: "Notice deleted" });
+    });
+});
+
+router.get("/getAllNotices", (req, res) => {
+    const sql = "SELECT * FROM notices ORDER BY created_at DESC";
+    con.query(sql, (err, results) => {
+        if (err) return res.json({ Status: false, Error: err });
+        return res.json({ Status: true, data: results });
+    });
+});
+
 export { router as adminRouter };
 
